@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Midterm Reviewer | Villarin</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <script src="./scripts/script.js"></script>
+  </head>
+  <body>
+    <main
+      class="container-fluid d-flex justify-content-center align-items-center"
+    >
+      <div
+        class="card w-100 p-4 m-4 card-color shadow-lg"
+        style="max-width: 1000px"
+      >
+        <div class="card-header">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-3">
+              <div class="pic"></div>
+              <div>
+                <h3 class="mb-1">Czachary Xavier Villarin</h3>
+                <p class="mb-0 text-muted">
+                  CIS 1202 - <i>Web Development I</i> | BSCS 1
+                </p>
+              </div>
+            </div>
+            <h3 class="mb-0">Smart Grocery Management</h3>
+          </div>
+          <hr class="mt-3 mb-0" />
+        </div>
+        <div class="card-body d-flex flex-column justify-content-between gap-4">
+          <div class="card card-color p-4 shadow-sm flex-fill">
+            <h4><i class="bi bi-list-check"></i> | Inventory Dashboard</h4>
+            <hr class="mt-2" />
+            <table id="inventory-table" class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Quantity</th>
+                  <th>Expiration Date</th>
+                </tr>
+              </thead>
+              <tbody id="inventory-body"></tbody>
+            </table>
+            <form id="add-item-form" class="mt-3">
+              <h5>Add Item</h5>
+              <div class="row">
+                <div class="col-md-4 mb-3">
+                  <label for="item-name" class="form-label">Item Name:</label>
+                  <input
+                    type="text"
+                    name="item-name"
+                    id="item-name"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="item-quantity" class="form-label"
+                    >Quantity:</label
+                  >
+                  <input
+                    type="number"
+                    name="item-quantity"
+                    id="item-quantity"
+                    class="form-control"
+                    min="1"
+                    required
+                  />
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="item-expiry" class="form-label"
+                    >Expiration Date:</label
+                  >
+                  <input
+                    type="date"
+                    name="item-expiry"
+                    id="item-expiry"
+                    class="form-control"
+                    required
+                  />
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">
+                Add Item
+              </button>
+            </form>
+            <div class="alert alert-info mt-3">
+              <i class="bi bi-info-circle"></i> Items highlighted in
+              <span class="text-danger">red</span> are expired, and items in
+              <span class="text-warning">yellow</span> are nearing expiration.
+            </div>
+          </div>
+
+          <div class="card card-color p-4 shadow-sm flex-fill">
+            <h4><i class="bi bi-cart"></i> | Smart Shopping List</h4>
+            <hr class="mt-2" />
+            <p>
+              This smart shopping list automatically highlights items that are
+              low in stock (quantity ≤ 2) or expired, and suggests discounted
+              alternatives.
+            </p>
+            <button
+              onclick="generateShoppingList()"
+              class="btn btn-primary mb-3 w-100"
+            >
+              Generate Shopping List
+            </button>
+            <div class="mt-2">
+              <ul id="shopping-list" class="list-group"></ul>
+            </div>
+            <div class="mt-3">
+              <h5><i class="bi bi-tag"></i> | Discounted Alternatives</h5>
+              <div id="discount-suggestions"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer text-center">
+          <hr class="m-0" />
+          <p class="text-muted mt-3">
+            © 2025, Czach Villarin. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

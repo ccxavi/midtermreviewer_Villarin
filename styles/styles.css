@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rampart+One&display=swap");
+
+:root {
+  --primary-font: "Poppins", sans-serif;
+  --secondary-font: "Rampart One", sans-serif;
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --border-color: rgba(255, 255, 255, 0.8);
+  --card-bg: rgba(10, 25, 80, 0.8);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--primary-font);
+  background-image: url(../assets/images/bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  font-size: 80%;
+}
+
+.card-color {
+  background: var(--card-bg) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+.card-header h3,
+.card-header p,
+p.text-center,
+.card-footer {
+  color: var(--text-primary) !important;
+}
+
+h3 {
+  font-family: var(--secondary-font);
+  color: var(--text-primary);
+}
+
+.pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-image: url(../assets/images/pic.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.card-footer p {
+  font-size: smaller;
+  color: var(--text-primary) !important;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.card-header,
+.card-footer {
+  border: none !important;
+}
+
+table {
+  font-size: 0.95rem;
+}
+
+.table-danger {
+  --bs-table-bg: rgba(220, 53, 69, 0.2);
+}
+
+.table-warning {
+  --bs-table-bg: rgba(255, 193, 7, 0.2);
+}
+
+#shopping-list .badge {
+  font-size: 0.7rem;
+}
+
+#generate-list-btn:hover {
+  transform: translateY(-1px);
+  transition: transform 0.2s;
+}
+
+.btn-success {
+  background-color: #28a745;
+}
+
+.btn-primary {
+  background-color: #007bff;
+}
